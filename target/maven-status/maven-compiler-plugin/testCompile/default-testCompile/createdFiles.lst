@@ -1,0 +1,10 @@
+testcases\LoginTest.class
+wrappers\Annotations.class
+utils\InputData.class
+pages\Items.class
+pages\LoginPage.class
+pages\AddItems.class
+testcases\ItemTest.class
+pages\EditItems.class
+pages\Dashboard.class
+utils\ReadConfig.class

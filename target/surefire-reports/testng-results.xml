@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Inventory" duration-ms="50019" started-at="2021-06-27T16:13:14 IST" finished-at="2021-06-27T16:14:04 IST">
+    <groups>
+    </groups>
+    <test name="Inventory Test" duration-ms="50019" started-at="2021-06-27T16:13:14 IST" finished-at="2021-06-27T16:14:04 IST">
+      <class name="testcases.ItemTest">
+        <test-method status="PASS" signature="setExtentAndData()[pri:0, instance:testcases.ItemTest@7494e528]" name="setExtentAndData" is-config="true" duration-ms="168" started-at="2021-06-27T16:13:14 IST" finished-at="2021-06-27T16:13:14 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setExtentAndData -->
+        <test-method status="PASS" signature="invokeBrowserAndLaunch(java.lang.String)[pri:0, instance:testcases.ItemTest@7494e528]" name="invokeBrowserAndLaunch" is-config="true" duration-ms="11424" started-at="2021-06-27T16:13:14 IST" finished-at="2021-06-27T16:13:25 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invokeBrowserAndLaunch -->
+        <test-method status="PASS" signature="clickSaveLocationBtnByFillingMandatoryFields()[pri:0, instance:testcases.ItemTest@7494e528]" name="clickSaveLocationBtnByFillingMandatoryFields" duration-ms="35690" started-at="2021-06-27T16:13:25 IST" finished-at="2021-06-27T16:14:01 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickSaveLocationBtnByFillingMandatoryFields -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:testcases.ItemTest@7494e528]" name="tearDown" is-config="true" duration-ms="2262" started-at="2021-06-27T16:14:01 IST" finished-at="2021-06-27T16:14:03 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=clickSaveLocationBtnByFillingMandatoryFields status=SUCCESS method=ItemTest.clickSaveLocationBtnByFillingMandatoryFields()[pri:0, instance:testcases.ItemTest@7494e528] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="endReport()[pri:0, instance:testcases.ItemTest@7494e528]" name="endReport" is-config="true" duration-ms="427" started-at="2021-06-27T16:14:03 IST" finished-at="2021-06-27T16:14:04 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endReport -->
+      </class> <!-- testcases.ItemTest -->
+    </test> <!-- Inventory Test -->
+  </suite> <!-- Inventory -->
+</testng-results>
