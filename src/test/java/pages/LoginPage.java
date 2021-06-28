@@ -53,6 +53,10 @@ public class LoginPage extends Annotations {
 		
 		return new Dashboard();
 		}
+	
+	public void logout() {
+		
+	}
 
 	}
 

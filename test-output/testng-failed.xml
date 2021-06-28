@@ -6,7 +6,7 @@
     <classes>
       <class name="testcases.ItemTest">
         <methods>
-          <include name="clickSaveLocationBtnByFillingMandatoryFields"/>
+          <include name="addAnotherCustomField"/>
           <include name="invokeBrowserAndLaunch"/>
           <include name="setExtentAndData"/>
           <include name="tearDown"/>

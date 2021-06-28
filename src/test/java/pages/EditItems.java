@@ -137,9 +137,7 @@ public class EditItems extends Annotations {
 	
 	public EditItems clickSaveLocationBtnByFillingMandatoryFields() throws Exception {
 		
-		String currentWindow = driver.getWindowHandle();
-		System.out.println(currentWindow);
-		driver.switchTo().window(currentWindow);
+		
 		WebDriverWait wait = new WebDriverWait(driver, 30);
 		WebElement locationCode = driver.findElement(By.xpath("//div[@class='input-group']//div[@class='input-group-addon']//a[@id='genWarehouseCode']//i[@class='fa fa-cogs']"));
 		wait.until(ExpectedConditions.visibilityOf(locationCode));
@@ -160,5 +158,73 @@ public class EditItems extends Annotations {
 		
 		return new EditItems();
 	}
+	
+	public EditItems addCustomField() throws Exception {
+		
+		WebElement addCustomFieldButton = driver.findElement(By.xpath("//div[@class='col-md-6 text-right']//button[@class='btn btn-default']"));
+		jse.executeScript("arguments[0].scrollIntoView();", addCustomFieldButton);
+		addCustomFieldButton.click();
+		
+		Thread.sleep(1000);
+		WebElement saveBtn = driver.findElement(By.id("formSaveCustom"));
+		saveBtn.click();
+		
+		WebElement getError = driver.findElement(By.xpath("//div[@class='bootbox-body']"));
+		String result = getError.getText();
+		WebElement closeError = driver.findElement(By.xpath("//div[@class='modal-footer']//button[@data-bb-handler='ok']"));
+		closeError.click();
+		if(result.equals("All fields are required")) {
+			Assert.assertTrue(true);
+		}else {
+			Assert.assertTrue(false);
+		}
+		
+		Thread.sleep(5000);
+		return new EditItems();
+	}
+	
+	public EditItems addAnotherCustomField() throws Exception {
+		
+		WebElement addCustomFieldButton = driver.findElement(By.xpath("//div[@class='col-md-6 text-right']//button[@class='btn btn-default']"));
+		jse.executeScript("arguments[0].scrollIntoView();", addCustomFieldButton);
+		addCustomFieldButton.click();
+		
+		Thread.sleep(1000);
+		
+		WebElement anotherCustomField = driver.findElement(By.xpath("//button[@id='addCustomField']"));
+		anotherCustomField.click();
+		Thread.sleep(1000);
+		
+		WebElement deleteAnotherCustomField = driver.findElement(By.xpath("//button[@class='btn btn-xs qudel']//i"));
+		deleteAnotherCustomField.click();
+		Thread.sleep(1000);
+		List<WebElement> close = driver.findElements(By.xpath("//button[@class='close']//i"));
+		for(int a=close.size()-1;a>=0;a--) {
+			if(a==1 || a==0) {
+				WebElement element = close.get(a);
+				element.click();
+				Thread.sleep(1000);
+			}
+		}
+		
+		return this;
+		
+	}
+	
+	public EditItems goToChannelsTab() throws Exception {
+		
+		WebDriverWait wait = new WebDriverWait(driver, 30);
+		WebElement channelsTab = driver.findElement(By.xpath("//div[@class='box-content']//ul[@id='myTab']//li[3]"));
+		wait.until(ExpectedConditions.visibilityOf(channelsTab));
+		channelsTab.click();
+		Thread.sleep(1000);
+		channelsTab.click();
+		
+		return this;
+	}
+	
+	
+	
+	
 	
 }

@@ -169,7 +169,7 @@ public class ItemTest extends Annotations {
 		.clickSaveLocationBtnWithoutFillingAnything();
 	}
 	
-	@Test
+	//@Test
 	public void clickSaveLocationBtnByFillingMandatoryFields() throws IOException, Exception {
 		new LoginPage()
 		.login("asalta.trial@gmail.com", "Welc0me.12", "Dashboard - Asalta Inventory");
@@ -183,6 +183,39 @@ public class ItemTest extends Annotations {
 		.goToLocationsTab()
 		.clickAddNewLocationButton()
 		.clickSaveLocationBtnByFillingMandatoryFields();
+	}
+	
+	//@Test
+	public void addCustomField() throws IOException, Exception {
+		new LoginPage()
+		.login("asalta.trial@gmail.com", "Welc0me.12", "Dashboard - Asalta Inventory");
+		new Dashboard()
+		.clickInventoryInSideMenu()
+		.clickItems();
+		new Items()
+		.clickActionsButton()
+		.clickEditItem();
+		new EditItems()
+		.goToLocationsTab()
+		.clickAddNewLocationButton()
+		.addCustomField();
+	}
+	
+	@Test
+	public void addAnotherCustomField() throws Exception {
+		
+		new LoginPage()
+		.login("asalta.trial@gmail.com", "Welc0me.12", "Dashboard - Asalta Inventory");
+		new Dashboard()
+		.clickInventoryInSideMenu()
+		.clickItems();
+		new Items()
+		.clickActionsButton()
+		.clickEditItem();
+		new EditItems()
+		.goToLocationsTab()
+		.clickAddNewLocationButton()
+		.addAnotherCustomField();
 	}
 
 }
